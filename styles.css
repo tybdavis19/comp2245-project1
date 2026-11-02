@@ -1,2 +1,287 @@
-/* Project 1: write all of your styles in this file.
-   Follow the layout, font and colour guide in the project brief. */
+* {
+    box-sizing: border-box;
+}
+
+/* General page styling */
+body {
+    margin: 0;
+    font-family: "Inter", Arial, sans-serif;
+    font-size: 18px;
+    line-height: 1.6;
+    color: #1A202C;
+}
+
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Centre the content */
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+
+section {
+    padding: 80px 0;
+}
+
+/*===========================================
+  HEADINGS
+========================================= */
+
+h1, h2, h3, .logo {
+    font-family: "Fraunces", Georgia, serif;
+    color: #22543D;
+}
+
+h1 {
+    font-size: 52px;
+}
+
+h2 {
+    font-size: 36px;
+}
+
+h3 {
+    font-size: 22px;
+}
+
+/* ==========================================
+    BUTTONS
+======================================== */
+
+.btn {
+   display: inline-block;
+   background-color:2F855A;
+    color: #FFFFFF;
+    font-weight: bold;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.btn:hover {
+
+   background-color: #276749
+}
+
+/* =========================================
+   HEADER
+========================================== */
+.hero {
+    background-color: #F0FFF4;
+}
+
+.hero .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    align-items: center;
+}
+
+.hero p {
+    font-size: 20px;
+    margin-bottom: 24px;
+}
+
+/* =======================================
+   WHY SHOP WITH US
+======================================== */
+.features h2 {
+    text-align: center;
+    margin-bottom: 48px;
+}
+
+.feature-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+}
+
+.feature {
+    background-color: #F7FAFC;
+    padding: 32px;
+    border-radius: 12px;
+}
+
+/* =====================================
+ VISIT THE MARKET
+=================================== */
+
+.visit {
+    background-color: #F0FFF4;
+}
+
+.visit .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    align-items: center;
+}
+
+/* Market information table */
+.visit table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+.visit caption {
+    text-align: left;
+}
+
+.visit th,
+.visit td {
+    padding: 10px 12px;
+    text-align: left;
+    border-bottom: 1px solid #C6F6D5;
+}
+
+
+.visit th {
+    background-color: #2F855A;
+    color: #FFFFFF;
+}
+
+
+.testimonial {
+    margin: 0;
+    padding: 32px;
+    background-color: #FFFFFF;
+    border-left: 6px solid #2F855A;
+    border-radius: 0 12px 12px 0;
+    font-style: italic;
+    font-size: 20px;
+}
+
+
+.testimonial cite {
+    display: block;
+    color: #4A5568;
+    font-size: 16px;
+    font-style: normal;
+}
+
+
+/* =====================================
+    MAILING LIST FORM
+===================================== */
+
+.mailing-list h2,
+.mailing-list > .container > p {
+    text-align: center;
+}
+
+
+.mailing-list form {
+    max-width: 520px;
+    margin: 0 auto;
+}
+
+
+.mailing-list label {
+    display: block;
+}
+
+.mailing-list input,
+.mailing-list select {
+    display: block;
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #A0AEC0;
+    border-radius: 8px;
+    font: inherit;
+}
+
+
+.mailing-list .btn {
+    width: 100%;
+}
+
+
+.error {
+    color: #C53030;
+    font-size: 15px;
+    min-height: 24px;
+}
+
+/* Invalid form fields */
+[aria-invalid="true"] {
+    border: 2px solid #C53030;
+}
+
+/* Successful form message */
+#form-message.success {
+    max-width: 520px;
+    margin: 0 auto;
+    padding: 16px;
+    background-color: #C6F6D5;
+    color: #22543D;
+    font-weight: bold;
+    border-radius: 8px;
+}
+
+
+/* =================================
+ FOOTER
+===================================== */
+
+footer {
+    background-color: #22543D;
+    color: #FFFFFF;
+    font-size: 16px;
+    padding: 32px 0;
+}
+
+footer .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer p {
+    margin: 0;
+}
+
+
+/* =====================================
+    SMALL SCREENS
+================================= */
+
+@media (max-width: 768px) {
+
+    /* Smaller headings */
+    h1 {
+        font-size: 40px;
+    }
+
+    h2 {
+        font-size: 30px;
+    }
+
+    /* Reduce section spacing */
+    section {
+        padding: 48px 0;
+    }
+
+    
+    .site-header .container,
+    footer .container {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    
+    .hero .container,
+    .feature-list,
+    .visit .container {
+        grid-template-columns: 1fr;
+    }
+}
+
